@@ -9,7 +9,7 @@ const getProductController = require('../controllers/product/getProductControlle
 
 const updateProductController = require('../controllers/product/updateProductController');
 const deleteProductController = require('../controllers/product/deleteProductController');
-const searchProductController = require('../controllers/product/searchProductController');
+//const searchProductController = require('../controllers/product/searchProductController');
 
 
 router.post('/', uploadImageController.uploadImage, addProductController.addProduct); // Usar el middleware de carga de imagen

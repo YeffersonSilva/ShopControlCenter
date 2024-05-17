@@ -1,4 +1,4 @@
-import React, {useEffect, useState, Fragment} from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import clienteAxios from '../../config/axios';
 import DetallesPedido from './DetallesPedido';
 
@@ -7,13 +7,17 @@ function Pedidos() {
 
     useEffect(() => {
         const consultarAPI = async () => {
-            // obtener los pedidos
             const resultado = await clienteAxios.get('/orders');
             guardarPedidos(resultado.data);
-        }
+        };
 
         consultarAPI();
     }, []);
+
+    const eliminarPedidoDelEstado = id => {
+        const nuevosPedidos = pedidos.filter(pedido => pedido._id !== id);
+        guardarPedidos(nuevosPedidos);
+    };
 
     return (
         <Fragment>
@@ -24,11 +28,12 @@ function Pedidos() {
                     <DetallesPedido 
                         key={pedido._id}
                         pedido={pedido}
+                        eliminarPedidoDelEstado={eliminarPedidoDelEstado}
                     />
                 ))}
             </ul>
         </Fragment>
-    )
+    );
 }
 
 export default Pedidos;

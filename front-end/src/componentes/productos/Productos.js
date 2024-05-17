@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useContext, Fragment } from 'react';
+import { Link, withRouter } from 'react-router-dom'; // Importar withRouter
 import clienteAxios from '../../config/axios';
-import Producto from './Producto'; // Importa el componente Producto
+import Producto from './Producto';
 import Spinner from '../layout/Spinner';
-import { Link, withRouter } from 'react-router-dom';
 import { CRMContext } from '../../context/CRMContext';
 
 function Productos(props) {
     const [productos, guardarProductos] = useState([]);
-    const [auth, guardarAuth] = useContext(CRMContext);
+    const [auth] = useContext(CRMContext);
 
     useEffect(() => {
         if (auth.token !== '') {
@@ -20,8 +20,7 @@ function Productos(props) {
                     });
                     guardarProductos(productosConsulta.data);
                 } catch (error) {
-                    console.log(error);
-                    if (error.response && error.response.status === 500) {
+                    if (error.response.status === 500) {
                         props.history.push('/iniciar-sesion');
                     }
                 }
@@ -46,13 +45,19 @@ function Productos(props) {
     return (
         <Fragment>
             <h2>Productos</h2>
-            <Link to={"/productos/nuevo"} className="btn btn-verde nvo-producto">
+
+            <Link to={'/productos/nuevo'} className="btn btn-verde nvo-cliente"> 
                 <i className="fas fa-plus-circle"></i>
                 Nuevo Producto
             </Link>
+
             <ul className="listado-productos">
                 {productos.map(producto => (
-                    <Producto key={producto._id} producto={producto} eliminarProductoDelEstado={eliminarProductoDelEstado} />
+                    <Producto 
+                        key={producto._id}
+                        producto={producto}
+                        eliminarProductoDelEstado={eliminarProductoDelEstado}
+                    />
                 ))}
             </ul>
         </Fragment>

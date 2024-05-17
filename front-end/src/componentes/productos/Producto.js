@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import clienteAxios from '../../config/axios';
 
-function Producto({ producto }) {
+function Producto({ producto, eliminarProductoDelEstado }) {
     const { _id, name, price, image } = producto;
 
     const eliminarProducto = id => {
@@ -21,6 +21,7 @@ function Producto({ producto }) {
                 clienteAxios.delete(`/products/${id}`)
                     .then(res => {
                         if (res.status === 200) {
+                            eliminarProductoDelEstado(id);
                             Swal.fire(
                                 'Eliminado',
                                 res.data.message,
