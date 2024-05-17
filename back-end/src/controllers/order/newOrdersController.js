@@ -1,5 +1,6 @@
 const Orders = require('../../models/Order');
 
+// Add a new order
 exports.newOrder = async (req, res, next) => {
     const order = new Orders(req.body);
     try {
