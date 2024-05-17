@@ -3,13 +3,12 @@ import clienteAxios from '../../config/axios';
 import DetallesPedido from './DetallesPedido';
 
 function Pedidos() {
-
     const [pedidos, guardarPedidos] = useState([]);
 
     useEffect(() => {
         const consultarAPI = async () => {
             // obtener los pedidos
-            const resultado = await clienteAxios.get('/pedidos');
+            const resultado = await clienteAxios.get('/orders');
             guardarPedidos(resultado.data);
         }
 
@@ -31,4 +30,5 @@ function Pedidos() {
         </Fragment>
     )
 }
+
 export default Pedidos;

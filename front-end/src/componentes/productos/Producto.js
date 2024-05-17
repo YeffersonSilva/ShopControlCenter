@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import clienteAxios from '../../config/axios';
 
-function Producto({ producto, eliminarProductoDelEstado }) {
+function Producto({ producto }) {
     const { _id, name, price, image } = producto;
 
     const eliminarProducto = id => {
@@ -26,15 +26,7 @@ function Producto({ producto, eliminarProductoDelEstado }) {
                                 res.data.message,
                                 'success'
                             );
-                            eliminarProductoDelEstado(id);
                         }
-                    })
-                    .catch(error => {
-                        Swal.fire(
-                            'Error',
-                            'Hubo un error al eliminar el producto',
-                            'error'
-                        );
                     });
             }
         });
