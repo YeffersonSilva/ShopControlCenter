@@ -9,6 +9,7 @@ const getProductController = require('../controllers/product/getProductControlle
 
 const updateProductController = require('../controllers/product/updateProductController');
 const deleteProductController = require('../controllers/product/deleteProductController');
+const searchProductController = require('../controllers/product/searchProductController');
 
 
 router.post('/', uploadImageController.uploadImage, addProductController.addProduct); // Usar el middleware de carga de imagen
@@ -17,5 +18,6 @@ router.get('/:id', getProductController.getProduct);
 router.put('/:id',uploadImageController.uploadImage, updateProductController.udpatProduct);
 
 router.delete('/:id', deleteProductController.deleteProduct);
+router.post('/search', getProductsController.searchProducts);
 
 module.exports = router;

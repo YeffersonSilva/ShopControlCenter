@@ -1,6 +1,5 @@
 const Orders = require('../../models/Order');
 
-// Add a new order
 exports.newOrder = async (req, res, next) => {
     const order = new Orders(req.body);
     try {
@@ -8,6 +7,7 @@ exports.newOrder = async (req, res, next) => {
         res.json({ message: 'New order added' });
     } catch (error) {
         console.log(error);
+        res.json({ message: 'An error occurred' });
         next(error);
     }
 };
