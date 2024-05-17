@@ -5,7 +5,8 @@
 **ShopControlCenter** is a comprehensive web application designed to manage clients, products, and orders for a retail business. This project features both a backend server built with Node.js and Express, and a frontend client built with React. The application facilitates CRUD operations (Create, Read, Update, Delete) for managing clients, products, and orders, with a focus on providing a seamless and efficient user experience.
 
 
-https://github.com/YeffersonSilva/ShopControlCenter/assets/117882117/0802b39e-9334-4c42-8867-bf605564caa4
+https://github.com/YeffersonSilva/ShopControlCenter/assets/117882117/aa6581a2-768c-48e0-a11e-e56ee4cdc737
+
 
 
 
