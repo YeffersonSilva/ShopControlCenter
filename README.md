@@ -26,21 +26,19 @@ https://github.com/YeffersonSilva/ShopControlCenter/assets/117882117/aa6581a2-76
 ## Features
 
 - **Client Management:** Add, edit, view, and delete clients.
- ![image](https://github.com/YeffersonSilva/ShopControlCenter/assets/117882117/3994b173-fad5-42b5-a737-1b7b00fe17ac)
-
+ 
 
 - **Product Management:** Add, edit, view, and delete products.
- ![image](https://github.com/YeffersonSilva/ShopControlCenter/assets/117882117/a12971a9-6175-4470-af31-1d307e4e8900)
+
 
 
 - **Order Management:** Create new orders, view order details, and delete orders.
-  ![image](https://github.com/YeffersonSilva/ShopControlCenter/assets/117882117/bdd4e7ca-fac9-498e-8e4c-aaf93ea3c137)
+
 
 - **Authentication:** User authentication and authorization using JWT.
- ![image](https://github.com/YeffersonSilva/ShopControlCenter/assets/117882117/1604933b-ed29-40ab-b823-b3e9876c22b3)
+
 
 - **Image Uploads:** Support for uploading product images.
- ![image](https://github.com/YeffersonSilva/ShopControlCenter/assets/117882117/764b7939-582f-413a-aecc-b367f494d670)
 
 - **Responsive Design:** The frontend is designed to be responsive and user-friendly.
 
