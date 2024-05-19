@@ -151,4 +151,4 @@ https://github.com/YeffersonSilva/ShopControlCenter/assets/117882117/aa6581a2-76
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-Feel free to contribute to this project by submitting issues or pull requests. For any questions, you can contact me at [your-email@example.com].
+Feel free to contribute to this project by submitting issues or pull requests. For any questions, you can contact me at [yeffersonsilvagomez@gmail.com].
